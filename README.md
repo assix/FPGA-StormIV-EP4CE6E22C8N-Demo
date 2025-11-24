@@ -33,10 +33,12 @@ The included code (`fpga_storm_iv_demo.v`) implements a full-board diagnostic. H
 | **7-Seg Data**| A,B,C,D,E,F,G,DP | `100`, `111`, `104`, `110`, `106`, `101`, `103`, `105` |
 | **Audio** | Buzzer | `PIN_7` |
 
-### Action Shot
-Running the `fpga_storm_iv_demo` project:
-![Active LEDs](images/storm_iv_v2_demo_active_leds_7seg.jpg)
-*Status: 7-Segment counting (0-9999), binary LEDs toggling, and button inputs active.*
+## Board Specifications
+* **Board Model:** Storm_IV_XX_V2.0
+* **FPGA Chip:** Intel (Altera) Cyclone IV EP4CE6E22C8N
+* **Clock:** 50MHz Oscillator (PIN_91)
+* **Logic Elements:** 6,272
+* **Features:** 4x Keys, 4x DIPs, 8x LEDs, 4-Digit 7-Seg, Buzzer, VGA, PS/2, UART.
 
 ---
 
@@ -52,7 +54,7 @@ Unlike processors that run software sequentially, an FPGA (Field-Programmable Ga
 | **ASIC** | **Fixed Silicon** | Mass production (i.e., Bitcoin miners, Intel CPUs). | Cannot be changed once manufactured. |
 
 ### What you can build with this board:
-1.  **True Hardware Emulation:** Recreate the equivalent of a Nintendo NES or GameBoy physically in silicon (MiSTer project concept).
+1.  **True Hardware Emulation:** Recreate a Nintendo NES or GameBoy physically in silicon (MiSTer project concept).
 2.  **High-Speed Signal Processing:** Analyze radio signals or audio faster than a CPU can.
 3.  **Custom Accelerators:** Offload specific math tasks from your computer to the FPGA.
 4.  **Robotics:** Control 20+ motors simultaneously with perfect synchronization (impossible on an Arduino).
@@ -84,4 +86,8 @@ This project uses **Intel Quartus Prime Lite Edition** (Free).
 3.  In Quartus, go to **Tools** $\rightarrow$ **Programmer**.
 4.  Click **Hardware Setup** and select **USB-Blaster**.
 5.  Click **Start**.
-    * *Troubleshooting:* If it fails, click **Auto Detect**, verify the chip is `EP4CE6`, re-select the `.sof` file, and try again.
+
+### 5. What to See in Action
+If the upload is successful, your board should look like this:
+![Active LEDs](images/storm_iv_v2_demo_active_leds_7seg.jpg)
+*Status: 7-Segment counting (0-9999), binary LEDs toggling, and button inputs active.*
