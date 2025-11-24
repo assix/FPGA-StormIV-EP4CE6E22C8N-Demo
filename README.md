@@ -40,6 +40,25 @@ Running the `fpga_storm_iv_demo` project:
 
 ---
 
+## Why Use an FPGA?
+Unlike processors that run software sequentially, an FPGA (Field-Programmable Gate Array) allows you to rewire the physical silicon chip itself.
+
+| Hardware | Architecture | Best Use Case | Key Limitation |
+| :--- | :--- | :--- | :--- |
+| **FPGA** | **Reconfigurable Logic** | Parallel processing, custom hardware interfaces, retro gaming (hardware emulation). | Harder to program (Verilog/VHDL), no OS. |
+| **Arduino** | **Microcontroller** | Simple automation, reading sensors, slow robotics. | Sequential execution (one line of code at a time). |
+| **Raspberry Pi** | **CPU + OS (Linux)** | Web servers, Python scripts, high-level apps. | OS "jitter" makes precise nanosecond timing impossible. |
+| **GPU** | **Parallel SIMD** | AI training, Graphics rendering, Matrix math. | High power consumption, fixed architecture. |
+| **ASIC** | **Fixed Silicon** | Mass production (i.e., Bitcoin miners, Intel CPUs). | Cannot be changed once manufactured. |
+
+### What you can build with this board:
+1.  **True Hardware Emulation:** Recreate a Nintendo NES or GameBoy physically in silicon (MiSTer project concept).
+2.  **High-Speed Signal Processing:** Analyze radio signals or audio faster than a CPU can.
+3.  **Custom Accelerators:** Offload specific math tasks from your computer to the FPGA.
+4.  **Robotics:** Control 20+ motors simultaneously with perfect synchronization (impossible on an Arduino).
+
+---
+
 ## Software & Development Guide
 
 ### 1. Prerequisite Software
