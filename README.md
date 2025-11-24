@@ -90,4 +90,5 @@ This project uses **Intel Quartus Prime Lite Edition** (Free).
 ### 5. What to See in Action
 If the upload is successful, your board should look like this:
 ![Active LEDs](images/storm_iv_v2_demo_active_leds_7seg.jpg)
+
 *Status: 7-Segment counting (0-9999), binary LEDs toggling, and button inputs active.*
