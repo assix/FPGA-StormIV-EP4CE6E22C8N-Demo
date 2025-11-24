@@ -52,7 +52,7 @@ Unlike processors that run software sequentially, an FPGA (Field-Programmable Ga
 | **ASIC** | **Fixed Silicon** | Mass production (i.e., Bitcoin miners, Intel CPUs). | Cannot be changed once manufactured. |
 
 ### What you can build with this board:
-1.  **True Hardware Emulation:** Recreate a Nintendo NES or GameBoy physically in silicon (MiSTer project concept).
+1.  **True Hardware Emulation:** Recreate the equivalent of a Nintendo NES or GameBoy physically in silicon (MiSTer project concept).
 2.  **High-Speed Signal Processing:** Analyze radio signals or audio faster than a CPU can.
 3.  **Custom Accelerators:** Offload specific math tasks from your computer to the FPGA.
 4.  **Robotics:** Control 20+ motors simultaneously with perfect synchronization (impossible on an Arduino).
