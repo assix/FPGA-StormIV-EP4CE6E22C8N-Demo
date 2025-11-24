@@ -1,0 +1,58 @@
+set_global_assignment -name TOP_LEVEL_ENTITY fpga_storm_iv_demo
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE EP4CE6E22C8
+set_global_assignment -name CYCLONEII_RESERVE_NCEO_AFTER_CONFIGURATION "USE AS REGULAR IO"
+
+# --- CLOCK ---
+set_location_assignment PIN_91 -to clk
+
+# --- RESET BUTTON (Top Button) ---
+set_location_assignment PIN_90 -to rst_n
+
+# --- PUSH BUTTONS (Keys 1-4) ---
+# Previous code had these as DIPS. We moved them here.
+set_location_assignment PIN_11 -to keys[0]
+set_location_assignment PIN_25 -to keys[1]
+set_location_assignment PIN_24 -to keys[2]
+set_location_assignment PIN_23 -to keys[3]
+
+# --- DIP SWITCHES ---
+# Previous code had these as KEYS. We moved them here.
+set_location_assignment PIN_34 -to dips[0]
+set_location_assignment PIN_33 -to dips[1]
+set_location_assignment PIN_88 -to dips[2]
+set_location_assignment PIN_89 -to dips[3]
+
+# --- LEDS ---
+set_location_assignment PIN_39 -to leds[0]
+set_location_assignment PIN_31 -to leds[1]
+set_location_assignment PIN_3 -to leds[2]
+set_location_assignment PIN_2 -to leds[3]
+set_location_assignment PIN_1 -to leds[4]
+set_location_assignment PIN_144 -to leds[5]
+set_location_assignment PIN_143 -to leds[6]
+set_location_assignment PIN_142 -to leds[7]
+
+# --- 7-SEGMENT SELECTS ---
+set_location_assignment PIN_98 -to seg_sel[0]
+set_location_assignment PIN_99 -to seg_sel[1]
+set_location_assignment PIN_86 -to seg_sel[2]
+set_location_assignment PIN_87 -to seg_sel[3]
+
+# --- 7-SEGMENT DATA ---
+set_location_assignment PIN_100 -to seg_data[0]
+set_location_assignment PIN_111 -to seg_data[1]
+set_location_assignment PIN_104 -to seg_data[2]
+set_location_assignment PIN_110 -to seg_data[3]
+set_location_assignment PIN_106 -to seg_data[4]
+set_location_assignment PIN_101 -to seg_data[5]
+set_location_assignment PIN_103 -to seg_data[6]
+set_location_assignment PIN_105 -to seg_data[7]
+
+# --- BUZZER ---
+set_location_assignment PIN_7 -to beep
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name LAST_QUARTUS_VERSION "25.1std.0 Lite Edition"
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
